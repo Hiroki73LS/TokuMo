@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A2A1EFC27786EE600CEA4FE /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1EFB27786EE600CEA4FE /* Tests_iOS.swift */; };
+		4A2A1EFE27786EE600CEA4FE /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1EFD27786EE600CEA4FE /* Tests_iOSLaunchTests.swift */; };
+		4A2A1F0827786EE600CEA4FE /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1F0727786EE600CEA4FE /* Tests_macOS.swift */; };
+		4A2A1F0A27786EE600CEA4FE /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1F0927786EE600CEA4FE /* Tests_macOSLaunchTests.swift */; };
+		4A2A1F0B27786EE600CEA4FE /* TokuMoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1EE327786EE400CEA4FE /* TokuMoApp.swift */; };
+		4A2A1F0C27786EE600CEA4FE /* TokuMoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1EE327786EE400CEA4FE /* TokuMoApp.swift */; };
+		4A2A1F0D27786EE600CEA4FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1EE427786EE400CEA4FE /* ContentView.swift */; };
+		4A2A1F0E27786EE600CEA4FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2A1EE427786EE400CEA4FE /* ContentView.swift */; };
+		4A2A1F0F27786EE600CEA4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2A1EE527786EE600CEA4FE /* Assets.xcassets */; };
+		4A2A1F1027786EE600CEA4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2A1EE527786EE600CEA4FE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A2A1EF827786EE600CEA4FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A2A1EDE27786EE400CEA4FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A2A1EE927786EE600CEA4FE;
+			remoteInfo = "TokuMo (iOS)";
+		};
+		4A2A1F0427786EE600CEA4FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A2A1EDE27786EE400CEA4FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A2A1EEF27786EE600CEA4FE;
+			remoteInfo = "TokuMo (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A2A1EE327786EE400CEA4FE /* TokuMoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokuMoApp.swift; sourceTree = "<group>"; };
+		4A2A1EE427786EE400CEA4FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A2A1EE527786EE600CEA4FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A2A1EEA27786EE600CEA4FE /* TokuMo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokuMo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2A1EF027786EE600CEA4FE /* TokuMo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokuMo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2A1EF227786EE600CEA4FE /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		4A2A1EF727786EE600CEA4FE /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2A1EFB27786EE600CEA4FE /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		4A2A1EFD27786EE600CEA4FE /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		4A2A1F0327786EE600CEA4FE /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2A1F0727786EE600CEA4FE /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		4A2A1F0927786EE600CEA4FE /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A2A1EE727786EE600CEA4FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1EED27786EE600CEA4FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1EF427786EE600CEA4FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1F0027786EE600CEA4FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A2A1EDD27786EE400CEA4FE = {
+			isa = PBXGroup;
+			children = (
+				4A2A1EE227786EE400CEA4FE /* Shared */,
+				4A2A1EF127786EE600CEA4FE /* macOS */,
+				4A2A1EFA27786EE600CEA4FE /* Tests iOS */,
+				4A2A1F0627786EE600CEA4FE /* Tests macOS */,
+				4A2A1EEB27786EE600CEA4FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A2A1EE227786EE400CEA4FE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4A2A1EE327786EE400CEA4FE /* TokuMoApp.swift */,
+				4A2A1EE427786EE400CEA4FE /* ContentView.swift */,
+				4A2A1EE527786EE600CEA4FE /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4A2A1EEB27786EE600CEA4FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A2A1EEA27786EE600CEA4FE /* TokuMo.app */,
+				4A2A1EF027786EE600CEA4FE /* TokuMo.app */,
+				4A2A1EF727786EE600CEA4FE /* Tests iOS.xctest */,
+				4A2A1F0327786EE600CEA4FE /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A2A1EF127786EE600CEA4FE /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4A2A1EF227786EE600CEA4FE /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		4A2A1EFA27786EE600CEA4FE /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4A2A1EFB27786EE600CEA4FE /* Tests_iOS.swift */,
+				4A2A1EFD27786EE600CEA4FE /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		4A2A1F0627786EE600CEA4FE /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4A2A1F0727786EE600CEA4FE /* Tests_macOS.swift */,
+				4A2A1F0927786EE600CEA4FE /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A2A1EE927786EE600CEA4FE /* TokuMo (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2A1F1327786EE600CEA4FE /* Build configuration list for PBXNativeTarget "TokuMo (iOS)" */;
+			buildPhases = (
+				4A2A1EE627786EE600CEA4FE /* Sources */,
+				4A2A1EE727786EE600CEA4FE /* Frameworks */,
+				4A2A1EE827786EE600CEA4FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TokuMo (iOS)";
+			productName = "TokuMo (iOS)";
+			productReference = 4A2A1EEA27786EE600CEA4FE /* TokuMo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A2A1EEF27786EE600CEA4FE /* TokuMo (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2A1F1627786EE600CEA4FE /* Build configuration list for PBXNativeTarget "TokuMo (macOS)" */;
+			buildPhases = (
+				4A2A1EEC27786EE600CEA4FE /* Sources */,
+				4A2A1EED27786EE600CEA4FE /* Frameworks */,
+				4A2A1EEE27786EE600CEA4FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TokuMo (macOS)";
+			productName = "TokuMo (macOS)";
+			productReference = 4A2A1EF027786EE600CEA4FE /* TokuMo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A2A1EF627786EE600CEA4FE /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2A1F1927786EE600CEA4FE /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				4A2A1EF327786EE600CEA4FE /* Sources */,
+				4A2A1EF427786EE600CEA4FE /* Frameworks */,
+				4A2A1EF527786EE600CEA4FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A2A1EF927786EE600CEA4FE /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 4A2A1EF727786EE600CEA4FE /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4A2A1F0227786EE600CEA4FE /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2A1F1C27786EE600CEA4FE /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				4A2A1EFF27786EE600CEA4FE /* Sources */,
+				4A2A1F0027786EE600CEA4FE /* Frameworks */,
+				4A2A1F0127786EE600CEA4FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A2A1F0527786EE600CEA4FE /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 4A2A1F0327786EE600CEA4FE /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A2A1EDE27786EE400CEA4FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4A2A1EE927786EE600CEA4FE = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4A2A1EEF27786EE600CEA4FE = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4A2A1EF627786EE600CEA4FE = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4A2A1EE927786EE600CEA4FE;
+					};
+					4A2A1F0227786EE600CEA4FE = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4A2A1EEF27786EE600CEA4FE;
+					};
+				};
+			};
+			buildConfigurationList = 4A2A1EE127786EE400CEA4FE /* Build configuration list for PBXProject "TokuMo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A2A1EDD27786EE400CEA4FE;
+			productRefGroup = 4A2A1EEB27786EE600CEA4FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A2A1EE927786EE600CEA4FE /* TokuMo (iOS) */,
+				4A2A1EEF27786EE600CEA4FE /* TokuMo (macOS) */,
+				4A2A1EF627786EE600CEA4FE /* Tests iOS */,
+				4A2A1F0227786EE600CEA4FE /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A2A1EE827786EE600CEA4FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2A1F0F27786EE600CEA4FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1EEE27786EE600CEA4FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2A1F1027786EE600CEA4FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1EF527786EE600CEA4FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1F0127786EE600CEA4FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A2A1EE627786EE600CEA4FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2A1F0D27786EE600CEA4FE /* ContentView.swift in Sources */,
+				4A2A1F0B27786EE600CEA4FE /* TokuMoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1EEC27786EE600CEA4FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2A1F0E27786EE600CEA4FE /* ContentView.swift in Sources */,
+				4A2A1F0C27786EE600CEA4FE /* TokuMoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1EF327786EE600CEA4FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2A1EFE27786EE600CEA4FE /* Tests_iOSLaunchTests.swift in Sources */,
+				4A2A1EFC27786EE600CEA4FE /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2A1EFF27786EE600CEA4FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2A1F0A27786EE600CEA4FE /* Tests_macOSLaunchTests.swift in Sources */,
+				4A2A1F0827786EE600CEA4FE /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A2A1EF927786EE600CEA4FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A2A1EE927786EE600CEA4FE /* TokuMo (iOS) */;
+			targetProxy = 4A2A1EF827786EE600CEA4FE /* PBXContainerItemProxy */;
+		};
+		4A2A1F0527786EE600CEA4FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A2A1EEF27786EE600CEA4FE /* TokuMo (macOS) */;
+			targetProxy = 4A2A1F0427786EE600CEA4FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4A2A1F1127786EE600CEA4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A2A1F1227786EE600CEA4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4A2A1F1427786EE600CEA4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haya.TokuMo;
+				PRODUCT_NAME = TokuMo;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A2A1F1527786EE600CEA4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haya.TokuMo;
+				PRODUCT_NAME = TokuMo;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A2A1F1727786EE600CEA4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haya.TokuMo;
+				PRODUCT_NAME = TokuMo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4A2A1F1827786EE600CEA4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haya.TokuMo;
+				PRODUCT_NAME = TokuMo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4A2A1F1A27786EE600CEA4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haya.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TokuMo (iOS)";
+			};
+			name = Debug;
+		};
+		4A2A1F1B27786EE600CEA4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haya.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TokuMo (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A2A1F1D27786EE600CEA4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haya.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "TokuMo (macOS)";
+			};
+			name = Debug;
+		};
+		4A2A1F1E27786EE600CEA4FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haya.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "TokuMo (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A2A1EE127786EE400CEA4FE /* Build configuration list for PBXProject "TokuMo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2A1F1127786EE600CEA4FE /* Debug */,
+				4A2A1F1227786EE600CEA4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A2A1F1327786EE600CEA4FE /* Build configuration list for PBXNativeTarget "TokuMo (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2A1F1427786EE600CEA4FE /* Debug */,
+				4A2A1F1527786EE600CEA4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A2A1F1627786EE600CEA4FE /* Build configuration list for PBXNativeTarget "TokuMo (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2A1F1727786EE600CEA4FE /* Debug */,
+				4A2A1F1827786EE600CEA4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A2A1F1927786EE600CEA4FE /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2A1F1A27786EE600CEA4FE /* Debug */,
+				4A2A1F1B27786EE600CEA4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A2A1F1C27786EE600CEA4FE /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2A1F1D27786EE600CEA4FE /* Debug */,
+				4A2A1F1E27786EE600CEA4FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A2A1EDE27786EE400CEA4FE /* Project object */;
+}
