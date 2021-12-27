@@ -9,7 +9,23 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @FocusState private var nameFieldIsForcused: Bool   // フォーカス状態プロパティ
+    
+    enum Field:Int,Hashable{
+            case Forcus1
+        case Forcus2
+        case Forcus3
+        case Forcus4
+        case Forcus5
+        case Forcus6
+        case Forcus7
+        case Forcus8
+        case Forcus9
+        case Forcus10
+        }
+        
+        @FocusState var focus:Field?
+    
+    @FocusState private var Forcused: Bool   // フォーカス状態プロパティ
     @State var state: String = "Closed"
     
     @State var kakaku1 = ""
@@ -62,27 +78,34 @@ struct ContentView: View {
                         Text("価格(円)")
                             .font(.title)
                         TextField("", value: $kakaku1, formatter: NumberFormatter())
-                            .focused($nameFieldIsForcused)
-                            .onTapGesture {
-                                        kakaku1 = ""
-                                    }
+                            .focused($Forcused)
+                            .focused($focus, equals: Field.Forcus1)
                         TextField("", value: $kakaku2, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus3)
                         TextField("", value: $kakaku3, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus5)
                         TextField("", value: $kakaku4, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus7)
                         TextField("", value: $kakaku5, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus9)
                     }.onAppear {
                         /// 0.3秒の遅延発生後TextFieldに初期フォーカスをあてる
                         DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
-                            nameFieldIsForcused = true
+                            Forcused = true
                         }}
                     VStack{
                         Text("数量など")
                             .font(.title)
                         TextField("", value: $kazu1, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus2)
                         TextField("", value: $kazu2, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus4)
                         TextField("", value: $kazu3, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus6)
                         TextField("", value: $kazu4, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus8)
                         TextField("", value: $kazu5, formatter: NumberFormatter())
+                            .focused($focus, equals: Field.Forcus10)
                     }
                     VStack{
                         Text("単位価格")
@@ -180,7 +203,20 @@ struct ContentView: View {
                 }
                 Spacer()
             }
-        }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
+        }.toolbar{
+            ToolbarItem(placement: .keyboard){
+                HStack{
+                    Button(action: {
+                        focus = Field(rawValue: focus!.rawValue - 1)
+                    }){
+                        Image(systemName: "chevron.left")
+                    }
+                    Button(action: {
+                        focus = Field(rawValue: focus!.rawValue + 1)
+                    }){
+                        Image(systemName: "chevron.right")
+                    }}}}
+                    .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
             self.state = "Opened"
         }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
             self.state = "Closed"
