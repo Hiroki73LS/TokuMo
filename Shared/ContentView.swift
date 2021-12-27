@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+//import GoogleMobileAds
 
+@available(macOS 12.0, *)
 struct ContentView: View {
     
     enum Field:Int,Hashable{
@@ -69,8 +71,13 @@ struct ContentView: View {
                 }
             
             VStack{
-                Text("得最 TokuMo")
+                Text("どれがお得？")
                     .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .frame(width: 300, height: 48)
+                    .foregroundColor(Color(.white))
+                    .background(Color(.orange))
+                    .cornerRadius(3)
                 Spacer()
                 HStack{
                     VStack{
@@ -118,9 +125,38 @@ struct ContentView: View {
                 }
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .multilineTextAlignment(.trailing)
-                .keyboardType(.numberPad)
+                .keyboardType(.decimalPad)
                 .font(.title)
                 HStack{
+                    Button(action: {
+                        
+                        kakaku1 = ""
+                        kakaku2 = ""
+                        kakaku3 = ""
+                        kakaku4 = ""
+                        kakaku5 = ""
+                        kazu1 = ""
+                        kazu2 = ""
+                        kazu3 = ""
+                        kazu4 = ""
+                        kazu5 = ""
+                        hyouji1 = ""
+                        hyouji2 = ""
+                        hyouji3 = ""
+                        hyouji4 = ""
+                        hyouji5 = ""
+                        focus = Optional(TokuMo.ContentView.Field.Forcus1)
+                    }){
+                        Text("リセット")
+                            .fontWeight(.semibold)
+                            .frame(width: 140, height: 48)
+                            .foregroundColor(Color(.white))
+                            .background(Color(.blue))
+                            .cornerRadius(18)
+                            .font(.title)
+                    }
+                    Spacer()
+                        .frame(width: 20)
                     Button(action: {
                         ckakaku1 = Double(kakaku1) ?? 0
                         ckazu1 = Double(kazu1) ?? 0
@@ -145,6 +181,28 @@ struct ContentView: View {
                         hyouji4 = String(format: "%.3f", result4)
                         hyouji5 = String(format: "%.3f", result5)
                         
+                        if kazu1 == ""
+                        {
+                            hyouji1 = ""
+                        }
+                        if kazu2 == ""
+                        {
+                            hyouji2 = ""
+                        }
+                        if kazu3 == ""
+                        {
+                            hyouji3 = ""
+                        }
+                        if kazu4 == ""
+                        {
+                            hyouji4 = ""
+                        }
+                        if kazu5 == ""
+                        {
+                            hyouji5 = ""
+                        }
+
+
                         if result1.isNaN
                         {
                             hyouji1 = ""
@@ -168,38 +226,14 @@ struct ContentView: View {
                     }){
                         Text("計算")
                             .fontWeight(.semibold)
-                            .frame(width: 160, height: 48)
+                            .frame(width: 140, height: 48)
                             .foregroundColor(Color(.white))
                             .background(Color(.blue))
                             .cornerRadius(18)
                             .font(.title)
                     }
-                    Button(action: {
-                        
-                        kakaku1 = ""
-                        kakaku2 = ""
-                        kakaku3 = ""
-                        kakaku4 = ""
-                        kakaku5 = ""
-                        kazu1 = ""
-                        kazu2 = ""
-                        kazu3 = ""
-                        kazu4 = ""
-                        kazu5 = ""
-                        hyouji1 = ""
-                        hyouji2 = ""
-                        hyouji3 = ""
-                        hyouji4 = ""
-                        hyouji5 = ""
-                    }){
-                        Text("リセット")
-                            .fontWeight(.semibold)
-                            .frame(width: 160, height: 48)
-                            .foregroundColor(Color(.white))
-                            .background(Color(.blue))
-                            .cornerRadius(18)
-                            .font(.title)
-                    }
+
+                    
                 }
                 Spacer()
             }
