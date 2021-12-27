@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     
     enum Field:Int,Hashable{
-            case Forcus1
+        case Forcus1
         case Forcus2
         case Forcus3
         case Forcus4
@@ -21,9 +20,9 @@ struct ContentView: View {
         case Forcus8
         case Forcus9
         case Forcus10
-        }
-        
-        @FocusState var focus:Field?
+    }
+    
+    @FocusState var focus:Field?
     
     @FocusState private var Forcused: Bool   // フォーカス状態プロパティ
     @State var state: String = "Closed"
@@ -54,7 +53,7 @@ struct ContentView: View {
     @State var ckazu4 : Double = 0
     @State var ckakaku5 : Double = 0
     @State var ckazu5 : Double = 0
-
+    
     @State var hyouji1 : String = ""
     @State var hyouji2 : String = ""
     @State var hyouji3 : String = ""
@@ -77,16 +76,16 @@ struct ContentView: View {
                     VStack{
                         Text("価格(円)")
                             .font(.title)
-                        TextField("", value: $kakaku1, formatter: NumberFormatter())
+                        TextField("", text : $kakaku1)
                             .focused($Forcused)
                             .focused($focus, equals: Field.Forcus1)
-                        TextField("", value: $kakaku2, formatter: NumberFormatter())
+                        TextField("", text : $kakaku2)
                             .focused($focus, equals: Field.Forcus3)
-                        TextField("", value: $kakaku3, formatter: NumberFormatter())
+                        TextField("", text : $kakaku3)
                             .focused($focus, equals: Field.Forcus5)
-                        TextField("", value: $kakaku4, formatter: NumberFormatter())
+                        TextField("", text : $kakaku4)
                             .focused($focus, equals: Field.Forcus7)
-                        TextField("", value: $kakaku5, formatter: NumberFormatter())
+                        TextField("", text : $kakaku5)
                             .focused($focus, equals: Field.Forcus9)
                     }.onAppear {
                         /// 0.3秒の遅延発生後TextFieldに初期フォーカスをあてる
@@ -96,15 +95,15 @@ struct ContentView: View {
                     VStack{
                         Text("数量など")
                             .font(.title)
-                        TextField("", value: $kazu1, formatter: NumberFormatter())
+                        TextField("", text : $kazu1)
                             .focused($focus, equals: Field.Forcus2)
-                        TextField("", value: $kazu2, formatter: NumberFormatter())
+                        TextField("", text : $kazu2)
                             .focused($focus, equals: Field.Forcus4)
-                        TextField("", value: $kazu3, formatter: NumberFormatter())
+                        TextField("", text : $kazu3)
                             .focused($focus, equals: Field.Forcus6)
-                        TextField("", value: $kazu4, formatter: NumberFormatter())
+                        TextField("", text : $kazu4)
                             .focused($focus, equals: Field.Forcus8)
-                        TextField("", value: $kazu5, formatter: NumberFormatter())
+                        TextField("", text : $kazu5)
                             .focused($focus, equals: Field.Forcus10)
                     }
                     VStack{
@@ -123,17 +122,17 @@ struct ContentView: View {
                 .font(.title)
                 HStack{
                     Button(action: {
-                        ckakaku1 = Double(kakaku1) ?? 99
-                        ckazu1 = Double(kazu1) ?? 99
-                        ckakaku1 = Double(kakaku2) ?? 99
-                        ckazu1 = Double(kazu2) ?? 99
-                        ckakaku1 = Double(kakaku3) ?? 99
-                        ckazu1 = Double(kazu3) ?? 99
-                        ckakaku1 = Double(kakaku4) ?? 99
-                        ckazu1 = Double(kazu4) ?? 99
-                        ckakaku1 = Double(kakaku5) ?? 99
-                        ckazu1 = Double(kazu5) ?? 99
-
+                        ckakaku1 = Double(kakaku1) ?? 0
+                        ckazu1 = Double(kazu1) ?? 0
+                        ckakaku2 = Double(kakaku2) ?? 0
+                        ckazu2 = Double(kazu2) ?? 0
+                        ckakaku3 = Double(kakaku3) ?? 0
+                        ckazu3 = Double(kazu3) ?? 0
+                        ckakaku4 = Double(kakaku4) ?? 0
+                        ckazu4 = Double(kazu4) ?? 0
+                        ckakaku5 = Double(kakaku5) ?? 0
+                        ckazu5 = Double(kazu5) ?? 0
+                        
                         self.result1 = Double(self.ckakaku1) / Double(self.ckazu1)
                         self.result2 = Double(self.ckakaku2) / Double(self.ckazu2)
                         self.result3 = Double(self.ckakaku3) / Double(self.ckazu3)
@@ -176,6 +175,7 @@ struct ContentView: View {
                             .font(.title)
                     }
                     Button(action: {
+                        
                         kakaku1 = ""
                         kakaku2 = ""
                         kakaku3 = ""
@@ -211,12 +211,14 @@ struct ContentView: View {
                     }){
                         Image(systemName: "chevron.left")
                     }
+                    Spacer()
+                        .frame(width: 40)
                     Button(action: {
                         focus = Field(rawValue: focus!.rawValue + 1)
                     }){
                         Image(systemName: "chevron.right")
                     }}}}
-                    .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
             self.state = "Opened"
         }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
             self.state = "Closed"
