@@ -4,15 +4,7 @@
 target 'TokuMo (iOS)' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK'  #追加
   # Pods for TokuMo (iOS)
-
-end
-
-target 'TokuMo (macOS)' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-  pod 'Google-Mobile-Ads-SDK'
-  # Pods for TokuMo (macOS)
 
 end

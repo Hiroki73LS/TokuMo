@@ -1,12 +1,19 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//  Created by 林宏樹 on 2021/12/26.
-//
-
 import SwiftUI
-//import GoogleMobileAds
+import GoogleMobileAds
+
+struct BannerAdView: UIViewRepresentable {
+    func makeUIView(context: Context) -> GADBannerView {
+        let banner = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //こちらのadUnitIDはテスト用。本番環境では自身の広告ユニットIDに変更する
+        banner.rootViewController = UIApplication.shared.windows.first?.rootViewController
+        banner.load(GADRequest())
+        return banner
+    }
+    
+    func updateUIView(_ uiView: GADBannerView, context: Context) {
+    }
+}
 
 @available(macOS 12.0, *)
 struct ContentView: View {
@@ -235,6 +242,7 @@ struct ContentView: View {
 
                     
                 }
+                BannerAdView().frame(width: 320, height: 50)
                 Spacer()
             }
         }.toolbar{
