@@ -1,0 +1,6 @@
+framework module Pods_TokuMo__iOS_ {
+  umbrella header "Pods-TokuMo (iOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}
