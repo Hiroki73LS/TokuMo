@@ -78,18 +78,20 @@ struct ContentView: View {
                 }
             
             VStack{
+                BannerAdView().frame(width: 320, height: 50)
                 Text("どれがお得？")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .frame(width: 300, height: 48)
+                    .frame(width: 300, height: 40)
                     .foregroundColor(Color(.white))
                     .background(Color(.orange))
                     .cornerRadius(3)
                 Spacer()
                 HStack{
-                    VStack{
+                    VStack(spacing: 5){
                         Text("価格(円)")
                             .font(.title)
+                            .frame(height: 28)
                         TextField("", text : $kakaku1)
                             .focused($Forcused)
                             .focused($focus, equals: Field.Forcus1)
@@ -106,9 +108,10 @@ struct ContentView: View {
                         DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
                             Forcused = true
                         }}
-                    VStack{
+                    VStack(spacing: 5){
                         Text("数量など")
                             .font(.title)
+                            .frame(height: 28)
                         TextField("", text : $kazu1)
                             .focused($focus, equals: Field.Forcus2)
                         TextField("", text : $kazu2)
@@ -120,9 +123,10 @@ struct ContentView: View {
                         TextField("", text : $kazu5)
                             .focused($focus, equals: Field.Forcus10)
                     }
-                    VStack{
+                    VStack(spacing: 5){
                         Text("単位価格")
                             .font(.title)
+                            .frame(height: 28)
                         TextField("", text : $hyouji1)
                         TextField("", text: $hyouji2)
                         TextField("", text : $hyouji3)
@@ -156,7 +160,7 @@ struct ContentView: View {
                     }){
                         Text("リセット")
                             .fontWeight(.semibold)
-                            .frame(width: 140, height: 48)
+                            .frame(width: 140, height: 40)
                             .foregroundColor(Color(.white))
                             .background(Color(.blue))
                             .cornerRadius(18)
@@ -233,7 +237,7 @@ struct ContentView: View {
                     }){
                         Text("計算")
                             .fontWeight(.semibold)
-                            .frame(width: 140, height: 48)
+                            .frame(width: 140, height: 40)
                             .foregroundColor(Color(.white))
                             .background(Color(.blue))
                             .cornerRadius(18)
@@ -242,7 +246,6 @@ struct ContentView: View {
 
                     
                 }
-                BannerAdView().frame(width: 320, height: 50)
                 Spacer()
             }
         }.toolbar{
