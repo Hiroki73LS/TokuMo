@@ -6,19 +6,13 @@ import GoogleMobileAds
 struct BannerAdView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> GADBannerView {
-//        let banner = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        let banner = GADBannerView(adSize: kGADAdSizeBanner)
-        //-----------テストデバイス向けのコード↓
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
-            [ "4e063ab0ed22438654dc185740dde665" ] // device ID
-        //-----------テストデバイス向けのコード↑
         
+        let banner = GADBannerView(adSize: kGADAdSizeBanner)
         banner.adUnitID = "ca-app-pub-1023155372875273/2406169933"
         //↑こちら本物。
-        
 //        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        //↑こちらのadUnitIDはテスト用。本番環境では自身の広告ユニットIDに変更する
-
+        //↑こちらテスト用。
+        
         banner.rootViewController = UIApplication.shared.windows.first?.rootViewController
         banner.load(GADRequest())
         return banner
@@ -287,12 +281,5 @@ struct ContentView: View {
 extension UIApplication {
     func closeKeyboard() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
