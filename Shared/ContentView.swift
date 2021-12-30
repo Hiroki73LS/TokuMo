@@ -7,7 +7,7 @@ struct BannerAdView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> GADBannerView {
         
-        let banner = GADBannerView(adSize: kGADAdSizeBanner)
+        let banner = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         banner.adUnitID = "ca-app-pub-1023155372875273/2406169933"
         //↑こちら本物。
 //        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
