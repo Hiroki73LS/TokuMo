@@ -36,6 +36,8 @@ struct ContentView: View {
         case Forcus8
         case Forcus9
         case Forcus10
+        case Forcus11
+        case Forcus12
     }
     
     @FocusState var focus:Field?
@@ -58,7 +60,10 @@ struct ContentView: View {
     @State var kakaku5 = ""
     @State var kazu5 = ""
     @State var result5 : Double = 0
-    
+    @State var kakaku6 = ""
+    @State var kazu6 = ""
+    @State var result6 : Double = 0
+
     @State var ckakaku1 : Double = 0
     @State var ckazu1 : Double = 0
     @State var ckakaku2 : Double = 0
@@ -69,13 +74,16 @@ struct ContentView: View {
     @State var ckazu4 : Double = 0
     @State var ckakaku5 : Double = 0
     @State var ckazu5 : Double = 0
-    
+    @State var ckakaku6 : Double = 0
+    @State var ckazu6 : Double = 0
+
     @State var hyouji1 : String = ""
     @State var hyouji2 : String = ""
     @State var hyouji3 : String = ""
     @State var hyouji4 : String = ""
     @State var hyouji5 : String = ""
-    
+    @State var hyouji6 : String = ""
+
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.white, .green]), startPoint: .top, endPoint: .bottom)
@@ -110,6 +118,8 @@ struct ContentView: View {
                             .focused($focus, equals: Field.Forcus7)
                         TextField("", text : $kakaku5)
                             .focused($focus, equals: Field.Forcus9)
+                        TextField("", text : $kakaku6)
+                            .focused($focus, equals: Field.Forcus11)
                     }.onAppear {
                         /// 0.3秒の遅延発生後TextFieldに初期フォーカスをあてる
                         DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
@@ -129,16 +139,19 @@ struct ContentView: View {
                             .focused($focus, equals: Field.Forcus8)
                         TextField("", text : $kazu5)
                             .focused($focus, equals: Field.Forcus10)
+                        TextField("", text : $kazu6)
+                            .focused($focus, equals: Field.Forcus12)
                     }
                     VStack(spacing: 5){
                         Text("単位価格")
                             .font(.title)
                             .frame(height: 28)
                         TextField("", text : $hyouji1)
-                        TextField("", text: $hyouji2)
+                        TextField("", text : $hyouji2)
                         TextField("", text : $hyouji3)
                         TextField("", text : $hyouji4)
                         TextField("", text : $hyouji5)
+                        TextField("", text : $hyouji6)
                     }
                     .disabled(true)
                 }
@@ -148,22 +161,24 @@ struct ContentView: View {
                 .font(.title)
                 HStack{
                     Button(action: {
-                        
                         kakaku1 = ""
                         kakaku2 = ""
                         kakaku3 = ""
                         kakaku4 = ""
                         kakaku5 = ""
+                        kakaku6 = ""
                         kazu1 = ""
                         kazu2 = ""
                         kazu3 = ""
                         kazu4 = ""
                         kazu5 = ""
+                        kazu6 = ""
                         hyouji1 = ""
                         hyouji2 = ""
                         hyouji3 = ""
                         hyouji4 = ""
                         hyouji5 = ""
+                        hyouji6 = ""
                         focus = Optional(TokuMo.ContentView.Field.Forcus1)
                     }){
                         Text("リセット")
@@ -187,19 +202,23 @@ struct ContentView: View {
                         ckazu4 = Double(kazu4) ?? 0
                         ckakaku5 = Double(kakaku5) ?? 0
                         ckazu5 = Double(kazu5) ?? 0
-                        
+                        ckakaku6 = Double(kakaku6) ?? 0
+                        ckazu6 = Double(kazu6) ?? 0
+
                         self.result1 = Double(self.ckakaku1) / Double(self.ckazu1)
                         self.result2 = Double(self.ckakaku2) / Double(self.ckazu2)
                         self.result3 = Double(self.ckakaku3) / Double(self.ckazu3)
                         self.result4 = Double(self.ckakaku4) / Double(self.ckazu4)
                         self.result5 = Double(self.ckakaku5) / Double(self.ckazu5)
-                        
+                        self.result6 = Double(self.ckakaku6) / Double(self.ckazu6)
+
                         hyouji1 = String(format: "%.3f", result1)
                         hyouji2 = String(format: "%.3f", result2)
                         hyouji3 = String(format: "%.3f", result3)
                         hyouji4 = String(format: "%.3f", result4)
                         hyouji5 = String(format: "%.3f", result5)
-                        
+                        hyouji6 = String(format: "%.3f", result6)
+
                         if kazu1 == ""
                         {
                             hyouji1 = ""
@@ -219,6 +238,10 @@ struct ContentView: View {
                         if kazu5 == ""
                         {
                             hyouji5 = ""
+                        }
+                        if kazu6 == ""
+                        {
+                            hyouji6 = ""
                         }
 
 
@@ -242,6 +265,10 @@ struct ContentView: View {
                         {
                             hyouji5 = ""
                         }
+                        if result6.isNaN
+                        {
+                            hyouji6 = ""
+                        }
                     }){
                         Text("計算")
                             .fontWeight(.semibold)
@@ -259,18 +286,26 @@ struct ContentView: View {
         }.toolbar{
             ToolbarItem(placement: .keyboard){
                 HStack{
+                    Spacer()
+                        .frame(width: 110)
+                    HStack{
                     Button(action: {
                         focus = Field(rawValue: focus!.rawValue - 1)
                     }){
-                        Image(systemName: "chevron.left")
+                        Image(systemName: "arrow.left")
                     }
                     Spacer()
                         .frame(width: 40)
                     Button(action: {
                         focus = Field(rawValue: focus!.rawValue + 1)
                     }){
-                        Image(systemName: "chevron.right")
-                    }}}}
+                        Image(systemName: "arrow.right")
+                    }}
+                    Spacer()
+                    Button("閉じる"){
+                        UIApplication.shared.closeKeyboard()
+                    }
+                }}}
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
             self.state = "Opened"
         }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
